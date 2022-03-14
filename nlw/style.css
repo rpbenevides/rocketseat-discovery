@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 :root {
@@ -26,7 +27,7 @@ body {
   color: var(--text-color);
 }
 
-h2 {
+.title {
   font: 700 1.87rem 'Poppins', sans-serif;
   color: var(--title-color);
 }
@@ -71,6 +72,56 @@ nav {
   width: 100%;
 }
 
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--base-color);
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: var(--base-color);
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background: var(--body-color);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+
 .logo {
   font: 700 1.31rem 'Poppins', sans-serif;
   color: var(--title-color);
@@ -103,7 +154,7 @@ nav {
 }
 
 main {
-  margin-top: var(--header-height);
+  margin-top: calc(var(--header-height) + 2rem);
 }
 
 #home {
