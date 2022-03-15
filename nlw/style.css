@@ -122,6 +122,24 @@ nav.show ul.grid {
   gap: 4rem;
 }
 
+nav .icon-close {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 1.5rem;
+}
+
+nav.show .icon-close {
+  opacity: 1;
+  visibility: visible;
+}
+
+.toggle {
+  color: var(--base-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .logo {
   font: 700 1.31rem 'Poppins', sans-serif;
   color: var(--title-color);
