@@ -162,6 +162,14 @@ nav.show .icon-close {
   padding: 5rem 0;
 }
 
+.section header {
+  margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: var(--base-color);
+}
+
 .section .title {
   margin-bottom: 1rem;
 }
@@ -270,4 +278,13 @@ main {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.cards .grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 3.625 rem, 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
 }
