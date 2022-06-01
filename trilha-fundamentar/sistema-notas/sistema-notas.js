@@ -12,8 +12,10 @@ function transformarNotas(nota) {
     return (nota = 'C')
   } else if (nota <= 69 && nota >= 60) {
     return (nota = 'D')
-  } else {
+  } else if (nota <= 60) {
     return (nota = 'F')
+  } else {
+    return 'Entrada inválida!'
   }
 }
 
