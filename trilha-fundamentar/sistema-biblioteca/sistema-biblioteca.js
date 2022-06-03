@@ -37,4 +37,8 @@ const booksByCategory = [
 
 const totalCategories = booksByCategory.length
 
+for (let category of booksByCategory) {
+  console.log(`Total de livros da categoria ${category.category}`)
+}
+
 console.log(totalCategories)
